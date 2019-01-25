@@ -38,7 +38,7 @@ class sqlitedb {
     }
     //查询
     func getCity_code(city_name:String?) -> String {
-        let sql = "select * from citys where city_name = \'" + city_name! + "\'"
+        let sql = "select city_code from citys where city_name = \'" + city_name! + "\'"
         //sqlite3_stmt指针
         var stmt:OpaquePointer? = nil
         let cSql = sql.cString(using: .utf8)
@@ -52,11 +52,13 @@ class sqlitedb {
                 print(msg)
             }
         }
-    
+        
+        var res :String = ""
         while (sqlite3_step(stmt) == SQLITE_ROW){
-            print(sqlite3_column_name(stmt, 0))
-            print(sqlite3_column_text(stmt, 1))
+            let str = UnsafePointer(sqlite3_column_text(stmt, 0))
+            let str2 = String.init(cString: str!)
+            res = str2
         }
-        return ""
+        return res
     }
 }

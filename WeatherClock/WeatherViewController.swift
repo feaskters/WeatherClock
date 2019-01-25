@@ -48,7 +48,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         tableView.register(weatherCityCell.classForCoder(), forCellReuseIdentifier: cellID)
         //初始化数据库
         let db = sqlitedb.init()
-        db.getCity_code(city_name: "福建")
+        db.getCity_code(city_name: "北京")
     }
     
     // MARK: - tableViewDelegate
