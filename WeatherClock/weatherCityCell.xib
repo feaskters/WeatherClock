@@ -37,7 +37,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="8Ru-f2-0KK" firstAttribute="centerY" secondItem="A45-Pa-Jlq" secondAttribute="centerY" id="2qA-MK-6kH"/>
                     <constraint firstItem="kMn-5Y-RUC" firstAttribute="leading" secondItem="A45-Pa-Jlq" secondAttribute="leading" constant="20" id="7Li-Hv-08X"/>
@@ -49,7 +48,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="city" destination="kMn-5Y-RUC" id="CGZ-ub-dgZ"/>
+                <outlet property="city" destination="kMn-5Y-RUC" id="YcY-Y4-xEk"/>
+                <outlet property="type" destination="8Ru-f2-0KK" id="nPD-HP-bnA"/>
+                <outlet property="wendu" destination="Xzd-NM-1ky" id="lq0-5W-Rol"/>
             </connections>
             <point key="canvasLocation" x="176.80000000000001" y="106.59670164917542"/>
         </tableViewCell>

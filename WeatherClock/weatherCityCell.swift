@@ -10,7 +10,11 @@ import UIKit
 
 class weatherCityCell: UITableViewCell {
 
-      @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var wendu: UILabel!
+    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var city: UILabel!
+    var info :JSON = JSON.init("")
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +33,9 @@ class weatherCityCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.wendu.text = (info["data"]["wendu"].stringValue + "℃")
+        self.type.text = (info["data"]["forecast"][0]["type"].stringValue)
+        self.city.text = (info["cityInfo"]["city"].stringValue)
         
     }
 }

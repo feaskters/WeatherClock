@@ -16,7 +16,6 @@ class sqlitedb {
     
     //初始化方法打开数据库
     required init() {
-        print(Bundle.main.path(forResource: "citys", ofType: "db")!)
         
         //String类的路径，转换成cString
         let cpath = Bundle.main.path(forResource: "citys", ofType: "db")!.cString(using: .utf8)
@@ -60,5 +59,111 @@ class sqlitedb {
             res = str2
         }
         return res
+    }
+    
+    //查询
+    func getall() -> NSArray{
+        let sql = "select * from citys where pid = 0"
+        //sqlite3_stmt指针
+        var stmt:OpaquePointer? = nil
+        let cSql = sql.cString(using: .utf8)
+        
+        //编译
+        let prepare_result = sqlite3_prepare_v2(self.db, cSql!, -1, &stmt, nil)
+        if prepare_result != SQLITE_OK {
+            sqlite3_finalize(stmt)
+            if (sqlite3_errmsg(self.db)) != nil {
+                let msg = "SQLiteDB - failed to prepare SQL:\(sql)"
+                print(msg)
+            }
+        }
+        
+        let provinceArray :NSMutableArray = []
+        while (sqlite3_step(stmt) == SQLITE_ROW){
+            let dic :NSDictionary
+            let city_name = UnsafePointer(sqlite3_column_text(stmt, 0))
+            let city_code = UnsafePointer(sqlite3_column_text(stmt, 1))
+            let id = UnsafePointer(sqlite3_column_text(stmt, 2))
+            let pid = UnsafePointer(sqlite3_column_text(stmt, 4))
+            dic = ["region_name":String.init(cString:  city_name!),
+                               "region_id":String.init(cString:  id!),
+                               "parent_id":String.init(cString:  pid!),
+                               "agency_id":String.init(cString:  city_code!),
+                               "childs":getfirst(id: String.init(cString:  id!))
+                               ]
+            provinceArray.add(dic)
+        }
+        return provinceArray
+        
+    }
+    //查询城市
+    func getfirst(id:String) -> NSArray {
+        let sql = "select * from citys where pid = "+id
+        //sqlite3_stmt指针
+        var stmt:OpaquePointer? = nil
+        let cSql = sql.cString(using: .utf8)
+        
+        //编译
+        let prepare_result = sqlite3_prepare_v2(self.db, cSql!, -1, &stmt, nil)
+        if prepare_result != SQLITE_OK {
+            sqlite3_finalize(stmt)
+            if (sqlite3_errmsg(self.db)) != nil {
+                let msg = "SQLiteDB - failed to prepare SQL:\(sql)"
+                print(msg)
+            }
+        }
+        
+        let cityArray :NSMutableArray = []
+        while (sqlite3_step(stmt) == SQLITE_ROW){
+            let dic :NSDictionary
+            let city_name = UnsafePointer(sqlite3_column_text(stmt, 0))
+            let city_code = UnsafePointer(sqlite3_column_text(stmt, 1))
+            let id = UnsafePointer(sqlite3_column_text(stmt, 2))
+            let pid = UnsafePointer(sqlite3_column_text(stmt, 4))
+            dic = ["region_name":String.init(cString:  city_name!),
+                   "region_id":String.init(cString:  id!),
+                   "parent_id":String.init(cString:  pid!),
+                   "agency_id":String.init(cString:  city_code!),
+                   "childs":getsecond(id: String.init(cString:  id!))
+            ]
+            cityArray.add(dic)
+        }
+        return cityArray
+        
+    }
+    //查询县
+    func getsecond(id:String) -> NSArray {
+        let sql = "select * from citys where pid = "+id
+        //sqlite3_stmt指针
+        var stmt:OpaquePointer? = nil
+        let cSql = sql.cString(using: .utf8)
+        
+        //编译
+        let prepare_result = sqlite3_prepare_v2(self.db, cSql!, -1, &stmt, nil)
+        if prepare_result != SQLITE_OK {
+            sqlite3_finalize(stmt)
+            if (sqlite3_errmsg(self.db)) != nil {
+                let msg = "SQLiteDB - failed to prepare SQL:\(sql)"
+                print(msg)
+            }
+        }
+        
+        let xianArray :NSMutableArray = []
+        while (sqlite3_step(stmt) == SQLITE_ROW){
+            let dic :NSDictionary
+            let city_name = UnsafePointer(sqlite3_column_text(stmt, 0))
+            let city_code = UnsafePointer(sqlite3_column_text(stmt, 1))
+            let id = UnsafePointer(sqlite3_column_text(stmt, 2))
+            let pid = UnsafePointer(sqlite3_column_text(stmt, 4))
+            dic = ["region_name":String.init(cString:  city_name!),
+                   "region_id":String.init(cString:  id!),
+                   "parent_id":String.init(cString:  pid!),
+                   "agency_id":String.init(cString:  city_code!),
+                   "childs":""
+            ]
+            xianArray.add(dic)
+        }
+        return xianArray
+        
     }
 }
