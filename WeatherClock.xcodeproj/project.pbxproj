@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F728F06121FEBAF100A5EB3D /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728F05F21FEBAF100A5EB3D /* CityDetailViewController.swift */; };
+		F728F06221FEBAF100A5EB3D /* CityDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F728F06021FEBAF100A5EB3D /* CityDetailViewController.xib */; };
 		F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */; };
-		F74FDFB121FB0FB90038CC2A /* p.plist in Resources */ = {isa = PBXBuildFile; fileRef = F74FDFB021FB0FB90038CC2A /* p.plist */; };
 		F7C06AF621FAA887001009CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF521FAA887001009CD /* AppDelegate.swift */; };
 		F7C06AF821FAA887001009CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF721FAA887001009CD /* ViewController.swift */; };
 		F7C06AFB21FAA887001009CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C06AF921FAA887001009CD /* Main.storyboard */; };
@@ -28,8 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F728F05F21FEBAF100A5EB3D /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		F728F06021FEBAF100A5EB3D /* CityDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailViewController.xib; sourceTree = "<group>"; };
 		F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sqlitedb.swift; sourceTree = "<group>"; };
-		F74FDFB021FB0FB90038CC2A /* p.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = p.plist; sourceTree = "<group>"; };
 		F7C06AF221FAA887001009CD /* WeatherClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C06AF521FAA887001009CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C06AF721FAA887001009CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F728F05321FEA2D400A5EB3D /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F7E5DB2221FBF890007EDD9A /* citys.db */,
+				F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */,
+				F7E5DB3821FC628D007EDD9A /* UserStorage.swift */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		F728F05421FEA32600A5EB3D /* weatherCity */ = {
+			isa = PBXGroup;
+			children = (
+				F7C06B1721FAB5BA001009CD /* WeatherViewController.swift */,
+				F7C06B1921FAC4F0001009CD /* weatherCityCell.swift */,
+				F7C06B1B21FAC90F001009CD /* weatherCityCell.xib */,
+				F728F05F21FEBAF100A5EB3D /* CityDetailViewController.swift */,
+				F728F06021FEBAF100A5EB3D /* CityDetailViewController.xib */,
+			);
+			path = weatherCity;
+			sourceTree = "<group>";
+		};
 		F7C06AE921FAA887001009CD = {
 			isa = PBXGroup;
 			children = (
@@ -83,19 +107,14 @@
 			children = (
 				F7E5DB3421FC30B0007EDD9A /* SwiftyJson */,
 				F7C06B2121FAF00C001009CD /* BHJPickerView */,
+				F728F05321FEA2D400A5EB3D /* libs */,
+				F728F05421FEA32600A5EB3D /* weatherCity */,
 				F7C06AF521FAA887001009CD /* AppDelegate.swift */,
 				F7C06AF721FAA887001009CD /* ViewController.swift */,
-				F7E5DB2221FBF890007EDD9A /* citys.db */,
-				F7C06B1721FAB5BA001009CD /* WeatherViewController.swift */,
-				F7C06B1921FAC4F0001009CD /* weatherCityCell.swift */,
 				F7C06AF921FAA887001009CD /* Main.storyboard */,
-				F7C06B1B21FAC90F001009CD /* weatherCityCell.xib */,
 				F7C06AFC21FAA888001009CD /* Assets.xcassets */,
 				F7C06AFE21FAA888001009CD /* LaunchScreen.storyboard */,
 				F7C06B0121FAA888001009CD /* Info.plist */,
-				F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */,
-				F74FDFB021FB0FB90038CC2A /* p.plist */,
-				F7E5DB3821FC628D007EDD9A /* UserStorage.swift */,
 			);
 			path = WeatherClock;
 			sourceTree = "<group>";
@@ -184,8 +203,8 @@
 				F7E5DB2321FBF891007EDD9A /* citys.db in Resources */,
 				F7C06B0021FAA888001009CD /* LaunchScreen.storyboard in Resources */,
 				F7C06B1C21FAC90F001009CD /* weatherCityCell.xib in Resources */,
-				F74FDFB121FB0FB90038CC2A /* p.plist in Resources */,
 				F7C06AFD21FAA888001009CD /* Assets.xcassets in Resources */,
+				F728F06221FEBAF100A5EB3D /* CityDetailViewController.xib in Resources */,
 				F7C06AFB21FAA887001009CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +220,7 @@
 				F7C06B1A21FAC4F0001009CD /* weatherCityCell.swift in Sources */,
 				F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */,
 				F7E5DB3921FC628D007EDD9A /* UserStorage.swift in Sources */,
+				F728F06121FEBAF100A5EB3D /* CityDetailViewController.swift in Sources */,
 				F7E5DB3221FC309E007EDD9A /* SwiftyJSON.swift in Sources */,
 				F7C06B2B21FAF00C001009CD /* Configuration.swift in Sources */,
 				F7C06B1821FAB5BA001009CD /* WeatherViewController.swift in Sources */,
@@ -284,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -363,7 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zmh.WeatherClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,7 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zmh.WeatherClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

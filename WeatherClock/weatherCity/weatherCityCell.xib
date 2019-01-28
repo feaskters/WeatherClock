@@ -36,6 +36,13 @@
                         <color key="textColor" red="0.64864291981248356" green="0.33945631271731902" blue="0.98196321725845337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJp-55-rgK">
+                        <rect key="frame" x="0.0" y="73.5" width="341" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="iMt-IF-MrV"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8Ru-f2-0KK" firstAttribute="centerY" secondItem="A45-Pa-Jlq" secondAttribute="centerY" id="2qA-MK-6kH"/>
@@ -43,7 +50,10 @@
                     <constraint firstAttribute="trailing" secondItem="Xzd-NM-1ky" secondAttribute="trailing" constant="20" id="8gx-E0-zxN"/>
                     <constraint firstItem="8Ru-f2-0KK" firstAttribute="centerX" secondItem="A45-Pa-Jlq" secondAttribute="centerX" id="AEe-0S-GQr"/>
                     <constraint firstAttribute="bottom" secondItem="kMn-5Y-RUC" secondAttribute="bottom" id="FCT-Iy-mb8"/>
+                    <constraint firstAttribute="bottom" secondItem="sJp-55-rgK" secondAttribute="bottom" id="Kgw-ce-hBF"/>
+                    <constraint firstAttribute="trailing" secondItem="sJp-55-rgK" secondAttribute="trailing" id="M1L-FY-xJr"/>
                     <constraint firstItem="kMn-5Y-RUC" firstAttribute="top" secondItem="A45-Pa-Jlq" secondAttribute="top" id="QKB-ke-oYG"/>
+                    <constraint firstItem="sJp-55-rgK" firstAttribute="leading" secondItem="A45-Pa-Jlq" secondAttribute="leading" id="ZP3-81-zMP"/>
                     <constraint firstItem="Xzd-NM-1ky" firstAttribute="centerY" secondItem="A45-Pa-Jlq" secondAttribute="centerY" id="rDm-k9-hUE"/>
                 </constraints>
             </tableViewCellContentView>

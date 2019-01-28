@@ -23,8 +23,7 @@ class weatherCityCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
 
     func weatherCity() -> weatherCityCell{
@@ -36,6 +35,6 @@ class weatherCityCell: UITableViewCell {
         self.wendu.text = (info["data"]["wendu"].stringValue + "℃")
         self.type.text = (info["data"]["forecast"][0]["type"].stringValue)
         self.city.text = (info["cityInfo"]["city"].stringValue)
-        
+        self.backgroundColor = nil
     }
 }

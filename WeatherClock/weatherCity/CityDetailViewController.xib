@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityDetailViewController" customModule="WeatherClock" customModuleProvider="target">
+            <connections>
+                <outlet property="bg_view" destination="erp-IC-B6j" id="0PA-UH-YP6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherDetailScrollView" destination="eje-NV-fMA" id="n93-db-i1f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erp-IC-B6j">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eje-NV-fMA">
+                    <rect key="frame" x="8" y="60" width="359" height="547"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eje-NV-fMA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="2HN-W4-zpE"/>
+                <constraint firstItem="eje-NV-fMA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="H8B-vY-hnN"/>
+                <constraint firstItem="erp-IC-B6j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JrE-NU-R5y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eje-NV-fMA" secondAttribute="trailing" constant="8" id="Mdn-R1-GfJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="erp-IC-B6j" secondAttribute="bottom" id="RrM-rd-j7s"/>
+                <constraint firstItem="erp-IC-B6j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tbx-L5-lcq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="erp-IC-B6j" secondAttribute="trailing" id="q0n-ks-L8D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eje-NV-fMA" secondAttribute="bottom" constant="60" id="yq3-8a-b3f"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="52" y="52.623688155922046"/>
+        </view>
+    </objects>
+</document>

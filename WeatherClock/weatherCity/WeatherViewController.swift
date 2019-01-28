@@ -29,9 +29,8 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         //从接口获取json数据
         let info = getDataFromUrl(city_code: code)
         //城市json信息
-        cityList.add(info.stringValue)
+        cityList.add(info.rawString()!)
         //保存到用户数据中
-        //先转为二进制数据
         us.setNormalDefault(key: key, value: cityList)
         //刷新tableview
         self.tableView.insertRows(at: [IndexPath.init(row: cityList.count - 1, section: 0)], with: UITableView.RowAnimation.fade)
@@ -67,14 +66,16 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         tableView.sectionIndexBackgroundColor = nil
         tableView.register(weatherCityCell.classForCoder(), forCellReuseIdentifier: cellID)
         //从用户数据中读取citys
-            let tem = us.getNormalDefult(key: key)
-       
+        let tem = us.getNormalDefult(key: key)!
         
-        print(tem)
+        if tem.count == nil {
+            print("数据为空")
+        }else
+        {
+            self.cityList.addObjects(from: tem as! [Any])
+        }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
+
     
     // MARK: - tableViewDelegate
     //每个section中的行数
@@ -91,7 +92,6 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var cell : weatherCityCell = tableView.dequeueReusableCell(withIdentifier: cellID) as! weatherCityCell
         cell.contentView.backgroundColor = nil
         cell = cell.weatherCity()
-        print(self.cityList[indexPath.row])
         cell.info = JSON.init(parseJSON: self.cityList[indexPath.row] as! String)
         return cell
     }
@@ -111,6 +111,14 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         //添加到footview中
         footView.addSubview(button)
         return footView
+    }
+    
+    //点击cell跳转
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cdvc = CityDetailViewController.init(nibName: "CityDetailViewController", bundle: Bundle.main)
+        cdvc.cityInfo = JSON.init(parseJSON: self.cityList[indexPath.row] as! String)
+        cdvc.view.frame = self.view.frame
+        self.navigationController?.pushViewController(cdvc, animated: false)
     }
     
     //添加城市
@@ -134,6 +142,8 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     //MARK: - tableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         cityList.removeObject(at: indexPath.row)
+        //保存到用户数据中
+        us.setNormalDefault(key: key, value: cityList)
         self.tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.middle)
     }
     
