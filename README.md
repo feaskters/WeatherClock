@@ -18,6 +18,7 @@ IOS项目-天气时钟
     - 使用```swift  tableView.deleteRows(at: [IndexPath], with: UITableView.RowAnimation)```来动态删除cell
     - 使用```swift  tableView.reloadRows(at: [IndexPath], with: UITableView.RowAnimation)```来局部刷新cell
     - 使用```swift tableView.reloadData() ```来刷新整个tableview的数据
+7. 部分页面使用纯代码布局~~争取摆脱使用storyboard布局的习惯~~
 ## 所用资源
 1. 来自[爱给网](http://www.aigei.com/)的图片
 2. swift对json的解析和操作:[SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON)
