@@ -27,19 +27,33 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eje-NV-fMA">
-                    <rect key="frame" x="8" y="60" width="359" height="547"/>
+                    <rect key="frame" x="8" y="60" width="359" height="527"/>
                 </scrollView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jCT-1K-0DB">
+                    <rect key="frame" x="78" y="607" width="219" height="29"/>
+                    <segments>
+                        <segment title="今日"/>
+                        <segment title="明日"/>
+                        <segment title="后天"/>
+                        <segment title="大后天"/>
+                    </segments>
+                    <connections>
+                        <action selector="selectDate:" destination="-1" eventType="valueChanged" id="cfi-Tj-Dae"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="eje-NV-fMA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="2HN-W4-zpE"/>
+                <constraint firstItem="jCT-1K-0DB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8m3-vN-Yqb"/>
+                <constraint firstItem="jCT-1K-0DB" firstAttribute="top" secondItem="eje-NV-fMA" secondAttribute="bottom" constant="20" id="CMb-p0-TfS"/>
                 <constraint firstItem="eje-NV-fMA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="H8B-vY-hnN"/>
                 <constraint firstItem="erp-IC-B6j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JrE-NU-R5y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eje-NV-fMA" secondAttribute="trailing" constant="8" id="Mdn-R1-GfJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="erp-IC-B6j" secondAttribute="bottom" id="RrM-rd-j7s"/>
                 <constraint firstItem="erp-IC-B6j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tbx-L5-lcq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="erp-IC-B6j" secondAttribute="trailing" id="q0n-ks-L8D"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eje-NV-fMA" secondAttribute="bottom" constant="60" id="yq3-8a-b3f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eje-NV-fMA" secondAttribute="bottom" constant="80" id="xMJ-GS-6vc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

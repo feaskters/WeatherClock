@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		F728F06121FEBAF100A5EB3D /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728F05F21FEBAF100A5EB3D /* CityDetailViewController.swift */; };
 		F728F06221FEBAF100A5EB3D /* CityDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F728F06021FEBAF100A5EB3D /* CityDetailViewController.xib */; };
+		F748B81A2200052E00DB63B9 /* BHJPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B8152200052E00DB63B9 /* BHJPickerView.swift */; };
+		F748B81B2200052E00DB63B9 /* NSDate+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B8162200052E00DB63B9 /* NSDate+Date.swift */; };
+		F748B81C2200052E00DB63B9 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = F748B8172200052E00DB63B9 /* city.json */; };
+		F748B81D2200052E00DB63B9 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B8182200052E00DB63B9 /* AddressModel.swift */; };
+		F748B81E2200052E00DB63B9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B8192200052E00DB63B9 /* Configuration.swift */; };
+		F748B821220057FD00DB63B9 /* LSClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B820220057FD00DB63B9 /* LSClockViewController.swift */; };
 		F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */; };
 		F7C06AF621FAA887001009CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF521FAA887001009CD /* AppDelegate.swift */; };
 		F7C06AF821FAA887001009CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF721FAA887001009CD /* ViewController.swift */; };
@@ -18,11 +24,6 @@
 		F7C06B1821FAB5BA001009CD /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06B1721FAB5BA001009CD /* WeatherViewController.swift */; };
 		F7C06B1A21FAC4F0001009CD /* weatherCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06B1921FAC4F0001009CD /* weatherCityCell.swift */; };
 		F7C06B1C21FAC90F001009CD /* weatherCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C06B1B21FAC90F001009CD /* weatherCityCell.xib */; };
-		F7C06B2721FAF00C001009CD /* BHJPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06B2221FAF00C001009CD /* BHJPickerView.swift */; };
-		F7C06B2821FAF00C001009CD /* NSDate+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06B2321FAF00C001009CD /* NSDate+Date.swift */; };
-		F7C06B2921FAF00C001009CD /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = F7C06B2421FAF00C001009CD /* city.json */; };
-		F7C06B2A21FAF00C001009CD /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06B2521FAF00C001009CD /* AddressModel.swift */; };
-		F7C06B2B21FAF00C001009CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06B2621FAF00C001009CD /* Configuration.swift */; };
 		F7E5DB2321FBF891007EDD9A /* citys.db in Resources */ = {isa = PBXBuildFile; fileRef = F7E5DB2221FBF890007EDD9A /* citys.db */; };
 		F7E5DB3221FC309E007EDD9A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E5DB3021FC309E007EDD9A /* SwiftyJSON.swift */; };
 		F7E5DB3921FC628D007EDD9A /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E5DB3821FC628D007EDD9A /* UserStorage.swift */; };
@@ -31,6 +32,12 @@
 /* Begin PBXFileReference section */
 		F728F05F21FEBAF100A5EB3D /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
 		F728F06021FEBAF100A5EB3D /* CityDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailViewController.xib; sourceTree = "<group>"; };
+		F748B8152200052E00DB63B9 /* BHJPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHJPickerView.swift; sourceTree = "<group>"; };
+		F748B8162200052E00DB63B9 /* NSDate+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Date.swift"; sourceTree = "<group>"; };
+		F748B8172200052E00DB63B9 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		F748B8182200052E00DB63B9 /* AddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		F748B8192200052E00DB63B9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F748B820220057FD00DB63B9 /* LSClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSClockViewController.swift; sourceTree = "<group>"; };
 		F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sqlitedb.swift; sourceTree = "<group>"; };
 		F7C06AF221FAA887001009CD /* WeatherClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C06AF521FAA887001009CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,11 +49,6 @@
 		F7C06B1721FAB5BA001009CD /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		F7C06B1921FAC4F0001009CD /* weatherCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherCityCell.swift; sourceTree = "<group>"; };
 		F7C06B1B21FAC90F001009CD /* weatherCityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weatherCityCell.xib; sourceTree = "<group>"; };
-		F7C06B2221FAF00C001009CD /* BHJPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHJPickerView.swift; sourceTree = "<group>"; };
-		F7C06B2321FAF00C001009CD /* NSDate+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Date.swift"; sourceTree = "<group>"; };
-		F7C06B2421FAF00C001009CD /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
-		F7C06B2521FAF00C001009CD /* AddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
-		F7C06B2621FAF00C001009CD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F7E5DB2221FBF890007EDD9A /* citys.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = citys.db; sourceTree = "<group>"; };
 		F7E5DB3021FC309E007EDD9A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F7E5DB3121FC309E007EDD9A /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
@@ -86,6 +88,26 @@
 			path = weatherCity;
 			sourceTree = "<group>";
 		};
+		F748B8142200052E00DB63B9 /* BHJPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				F748B8152200052E00DB63B9 /* BHJPickerView.swift */,
+				F748B8162200052E00DB63B9 /* NSDate+Date.swift */,
+				F748B8172200052E00DB63B9 /* city.json */,
+				F748B8182200052E00DB63B9 /* AddressModel.swift */,
+				F748B8192200052E00DB63B9 /* Configuration.swift */,
+			);
+			path = BHJPickerView;
+			sourceTree = "<group>";
+		};
+		F748B81F220057DE00DB63B9 /* ClockSetting */ = {
+			isa = PBXGroup;
+			children = (
+				F748B820220057FD00DB63B9 /* LSClockViewController.swift */,
+			);
+			path = ClockSetting;
+			sourceTree = "<group>";
+		};
 		F7C06AE921FAA887001009CD = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +127,9 @@
 		F7C06AF421FAA887001009CD /* WeatherClock */ = {
 			isa = PBXGroup;
 			children = (
+				F748B81F220057DE00DB63B9 /* ClockSetting */,
+				F748B8142200052E00DB63B9 /* BHJPickerView */,
 				F7E5DB3421FC30B0007EDD9A /* SwiftyJson */,
-				F7C06B2121FAF00C001009CD /* BHJPickerView */,
 				F728F05321FEA2D400A5EB3D /* libs */,
 				F728F05421FEA32600A5EB3D /* weatherCity */,
 				F7C06AF521FAA887001009CD /* AppDelegate.swift */,
@@ -117,19 +140,6 @@
 				F7C06B0121FAA888001009CD /* Info.plist */,
 			);
 			path = WeatherClock;
-			sourceTree = "<group>";
-		};
-		F7C06B2121FAF00C001009CD /* BHJPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				F7C06B2221FAF00C001009CD /* BHJPickerView.swift */,
-				F7C06B2321FAF00C001009CD /* NSDate+Date.swift */,
-				F7C06B2421FAF00C001009CD /* city.json */,
-				F7C06B2521FAF00C001009CD /* AddressModel.swift */,
-				F7C06B2621FAF00C001009CD /* Configuration.swift */,
-			);
-			name = BHJPickerView;
-			path = "../../../Downloads/BHJPickerView-master/PickerViewDemo/PickerViewDemo/BHJPickerView";
 			sourceTree = "<group>";
 		};
 		F7E5DB3421FC30B0007EDD9A /* SwiftyJson */ = {
@@ -199,8 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C06B2921FAF00C001009CD /* city.json in Resources */,
 				F7E5DB2321FBF891007EDD9A /* citys.db in Resources */,
+				F748B81C2200052E00DB63B9 /* city.json in Resources */,
 				F7C06B0021FAA888001009CD /* LaunchScreen.storyboard in Resources */,
 				F7C06B1C21FAC90F001009CD /* weatherCityCell.xib in Resources */,
 				F7C06AFD21FAA888001009CD /* Assets.xcassets in Resources */,
@@ -222,12 +232,13 @@
 				F7E5DB3921FC628D007EDD9A /* UserStorage.swift in Sources */,
 				F728F06121FEBAF100A5EB3D /* CityDetailViewController.swift in Sources */,
 				F7E5DB3221FC309E007EDD9A /* SwiftyJSON.swift in Sources */,
-				F7C06B2B21FAF00C001009CD /* Configuration.swift in Sources */,
+				F748B81E2200052E00DB63B9 /* Configuration.swift in Sources */,
 				F7C06B1821FAB5BA001009CD /* WeatherViewController.swift in Sources */,
-				F7C06B2A21FAF00C001009CD /* AddressModel.swift in Sources */,
 				F7C06AF621FAA887001009CD /* AppDelegate.swift in Sources */,
-				F7C06B2821FAF00C001009CD /* NSDate+Date.swift in Sources */,
-				F7C06B2721FAF00C001009CD /* BHJPickerView.swift in Sources */,
+				F748B81B2200052E00DB63B9 /* NSDate+Date.swift in Sources */,
+				F748B81A2200052E00DB63B9 /* BHJPickerView.swift in Sources */,
+				F748B81D2200052E00DB63B9 /* AddressModel.swift in Sources */,
+				F748B821220057FD00DB63B9 /* LSClockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,11 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         if area.region_name != nil{
             code = area.agency_id!
         }else{
-            code = city.agency_id!
+            if city.region_name != nil{
+                code = city.agency_id!
+            }else{
+                code = "101330101"
+            }
         }
         //从接口获取json数据
         let info = getDataFromUrl(city_code: code)

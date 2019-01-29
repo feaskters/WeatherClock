@@ -13,7 +13,7 @@
         <!--时钟-->
         <scene sceneID="xXX-vn-IM8">
             <objects>
-                <viewController id="ajB-Gx-9b0" sceneMemberID="viewController">
+                <viewController id="ajB-Gx-9b0" customClass="LSClockViewController" customModule="WeatherClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohH-AU-2ms">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM0-d2-mo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="193"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="yKi-UE-i50">
+            <objects>
+                <viewController id="chQ-p8-BtL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U8O-hd-kXY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sba-yK-qip"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="设置" image="设置" selectedImage="设置" id="Atb-qs-Vqz"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojH-id-98i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="866"/>
         </scene>
         <!--天气-->
         <scene sceneID="VUm-wr-Dic">
@@ -72,6 +89,7 @@
                     <connections>
                         <segue destination="dcI-Wg-vqg" kind="relationship" relationship="viewControllers" id="i4G-5i-EgQ"/>
                         <segue destination="ajB-Gx-9b0" kind="relationship" relationship="viewControllers" id="cgJ-w9-YPr"/>
+                        <segue destination="chQ-p8-BtL" kind="relationship" relationship="viewControllers" id="oJT-04-Cu1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PD-L1-71B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,5 +122,6 @@
     <resources>
         <image name="天气" width="36" height="36"/>
         <image name="日程示例" width="36" height="36"/>
+        <image name="设置" width="36" height="36"/>
     </resources>
 </document>
