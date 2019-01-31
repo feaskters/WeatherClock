@@ -30,14 +30,20 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 code = "101330101"
             }
         }
+       self.addCityInfo(code: code)
+        //刷新tableview
+        self.tableView.insertRows(at: [IndexPath.init(row: cityList.count - 1, section: 0)], with: UITableView.RowAnimation.fade)
+        
+    }
+    
+    //通过code获取数据并添加到数组
+    func addCityInfo(code:String){
         //从接口获取json数据
         let info = getDataFromUrl(city_code: code)
         //城市json信息
         cityList.add(info.rawString()!)
         //保存到用户数据中
         us.setNormalDefault(key: key, value: cityList)
-        //刷新tableview
-        self.tableView.insertRows(at: [IndexPath.init(row: cityList.count - 1, section: 0)], with: UITableView.RowAnimation.fade)
         
     }
     
@@ -69,6 +75,11 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         tableView.backgroundColor = nil
         tableView.sectionIndexBackgroundColor = nil
         tableView.register(weatherCityCell.classForCoder(), forCellReuseIdentifier: cellID)
+       
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.cityList.removeAllObjects()
         //从用户数据中读取citys
         let tem = us.getNormalDefult(key: key)!
         
@@ -76,10 +87,15 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
             print("数据为空")
         }else
         {
-            self.cityList.addObjects(from: tem as! [Any])
+            let list_old = NSMutableArray.init(array: tem as! [Any])
+            for city in list_old{
+                let json = JSON.init(parseJSON: city as! String)
+                let code = json["cityInfo"]["cityId"].stringValue
+                self.addCityInfo(code: code)
+            }
         }
+        self.tableView.reloadData()
     }
-
     
     // MARK: - tableViewDelegate
     //每个section中的行数

@@ -1,0 +1,36 @@
+
+/* Class = "UINavigationItem"; title = "天气情况"; ObjectID = "9d3-KK-E9d"; */
+"9d3-KK-E9d.title" = "天气情况";
+
+/* Class = "UILabel"; text = "清空推送缓存"; ObjectID = "GAN-ZB-JTv"; */
+"GAN-ZB-JTv.text" = "清空推送缓存";
+
+/* Class = "UILabel"; text = "天气推送设置"; ObjectID = "Gb7-tj-Gn4"; */
+"Gb7-tj-Gn4.text" = "天气推送设置";
+
+/* Class = "UITableViewSection"; headerTitle = "缓存设置"; ObjectID = "M1q-Yc-vci"; */
+"M1q-Yc-vci.headerTitle" = "缓存设置";
+
+/* Class = "UITableViewSection"; headerTitle = "推送设置"; ObjectID = "NEy-9e-iHT"; */
+"NEy-9e-iHT.headerTitle" = "推送设置";
+
+/* Class = "UILabel"; text = "是否开启消息推送"; ObjectID = "TJU-JO-DCK"; */
+"TJU-JO-DCK.text" = "是否开启消息推送";
+
+/* Class = "UITabBarItem"; title = "时钟"; ObjectID = "b48-Or-9Ii"; */
+"b48-Or-9Ii.title" = "时钟";
+
+/* Class = "UITabBarItem"; title = "设置"; ObjectID = "fdu-yb-Oxx"; */
+"fdu-yb-Oxx.title" = "设置";
+
+/* Class = "UILabel"; text = "清空城市缓存"; ObjectID = "lxK-zI-oaB"; */
+"lxK-zI-oaB.text" = "清空城市缓存";
+
+/* Class = "UINavigationItem"; title = "设置"; ObjectID = "w3K-vv-kfj"; */
+"w3K-vv-kfj.title" = "设置";
+
+/* Class = "UITabBarItem"; title = "天气"; ObjectID = "yiJ-Nh-87w"; */
+"yiJ-Nh-87w.title" = "天气";
+
+/* Class = "UIViewController"; title = "天气"; ObjectID = "zma-Lx-buI"; */
+"zma-Lx-buI.title" = "天气";

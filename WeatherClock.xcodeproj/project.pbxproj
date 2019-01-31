@@ -16,6 +16,7 @@
 		F748B81E2200052E00DB63B9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B8192200052E00DB63B9 /* Configuration.swift */; };
 		F748B821220057FD00DB63B9 /* LSClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B820220057FD00DB63B9 /* LSClockViewController.swift */; };
 		F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */; };
+		F794B007220145F0004E9502 /* LSSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794B006220145F0004E9502 /* LSSettingTableViewController.swift */; };
 		F7C06AF621FAA887001009CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF521FAA887001009CD /* AppDelegate.swift */; };
 		F7C06AF821FAA887001009CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF721FAA887001009CD /* ViewController.swift */; };
 		F7C06AFB21FAA887001009CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C06AF921FAA887001009CD /* Main.storyboard */; };
@@ -39,6 +40,9 @@
 		F748B8192200052E00DB63B9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F748B820220057FD00DB63B9 /* LSClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSClockViewController.swift; sourceTree = "<group>"; };
 		F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sqlitedb.swift; sourceTree = "<group>"; };
+		F794B006220145F0004E9502 /* LSSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSettingTableViewController.swift; sourceTree = "<group>"; };
+		F794B00822017ACA004E9502 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F794B00922017ACA004E9502 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F7C06AF221FAA887001009CD /* WeatherClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C06AF521FAA887001009CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C06AF721FAA887001009CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 			path = ClockSetting;
 			sourceTree = "<group>";
 		};
+		F794B005220145D1004E9502 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F794B006220145F0004E9502 /* LSSettingTableViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		F7C06AE921FAA887001009CD = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +139,7 @@
 		F7C06AF421FAA887001009CD /* WeatherClock */ = {
 			isa = PBXGroup;
 			children = (
+				F794B005220145D1004E9502 /* Setting */,
 				F748B81F220057DE00DB63B9 /* ClockSetting */,
 				F748B8142200052E00DB63B9 /* BHJPickerView */,
 				F7E5DB3421FC30B0007EDD9A /* SwiftyJson */,
@@ -193,6 +206,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = F7C06AE921FAA887001009CD;
 			productRefGroup = F7C06AF321FAA887001009CD /* Products */;
@@ -231,6 +245,7 @@
 				F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */,
 				F7E5DB3921FC628D007EDD9A /* UserStorage.swift in Sources */,
 				F728F06121FEBAF100A5EB3D /* CityDetailViewController.swift in Sources */,
+				F794B007220145F0004E9502 /* LSSettingTableViewController.swift in Sources */,
 				F7E5DB3221FC309E007EDD9A /* SwiftyJSON.swift in Sources */,
 				F748B81E2200052E00DB63B9 /* Configuration.swift in Sources */,
 				F7C06B1821FAB5BA001009CD /* WeatherViewController.swift in Sources */,
@@ -249,6 +264,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F7C06AFA21FAA887001009CD /* Base */,
+				F794B00822017ACA004E9502 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -257,6 +273,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F7C06AFF21FAA888001009CD /* Base */,
+				F794B00922017ACA004E9502 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -268,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -329,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
