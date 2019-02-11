@@ -15,6 +15,7 @@ class LSSettingTableViewController: UITableViewController {
     private let key = "citys"
     @IBOutlet weak var clearDataOfCity: UITableViewCell!
     @IBOutlet weak var notificationSetting: UITableViewCell!
+    @IBOutlet weak var notificationCheck: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = true
@@ -40,7 +41,7 @@ class LSSettingTableViewController: UITableViewController {
         let action_delete = UIAlertAction.init(title: "清空", style: UIAlertAction.Style.destructive, handler:{
             action in
             //清除缓存
-            
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         })
         alert.addAction(action_cancel)
         alert.addAction(action_delete)
@@ -63,22 +64,7 @@ class LSSettingTableViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-    @IBAction func setNotification(_ sender: UISwitch) {
-        self.notificationSetting.isHidden = !sender.isOn
-        guard sender.isOn else {
-            
-            return
-        }
-        //设置推送内容
-        let notificationContent = UNMutableNotificationContent.init()
-        notificationContent.body = "test body"
-        notificationContent.title = "test title"
-        notificationContent.subtitle = "test subtitle"
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest.init(identifier: "test", content: notificationContent, trigger: trigger)
-        UNUserNotificationCenter.current().add(request) { (Error) in
-            print(Error as Any)
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 }

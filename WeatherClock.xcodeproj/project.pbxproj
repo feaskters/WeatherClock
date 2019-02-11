@@ -16,7 +16,10 @@
 		F748B81E2200052E00DB63B9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B8192200052E00DB63B9 /* Configuration.swift */; };
 		F748B821220057FD00DB63B9 /* LSClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748B820220057FD00DB63B9 /* LSClockViewController.swift */; };
 		F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */; };
+		F759EA82221170DF00418426 /* LSPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759EA81221170DF00418426 /* LSPostTableViewController.swift */; };
 		F794B007220145F0004E9502 /* LSSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794B006220145F0004E9502 /* LSSettingTableViewController.swift */; };
+		F7B810532202CFA300FC02A3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B810522202CFA300FC02A3 /* PostViewController.swift */; };
+		F7B810572202E21D00FC02A3 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B810562202E21D00FC02A3 /* TimePickerViewController.swift */; };
 		F7C06AF621FAA887001009CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF521FAA887001009CD /* AppDelegate.swift */; };
 		F7C06AF821FAA887001009CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C06AF721FAA887001009CD /* ViewController.swift */; };
 		F7C06AFB21FAA887001009CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C06AF921FAA887001009CD /* Main.storyboard */; };
@@ -40,9 +43,12 @@
 		F748B8192200052E00DB63B9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F748B820220057FD00DB63B9 /* LSClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSClockViewController.swift; sourceTree = "<group>"; };
 		F74FDFAC21FB0B200038CC2A /* sqlitedb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sqlitedb.swift; sourceTree = "<group>"; };
+		F759EA81221170DF00418426 /* LSPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPostTableViewController.swift; sourceTree = "<group>"; };
 		F794B006220145F0004E9502 /* LSSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSettingTableViewController.swift; sourceTree = "<group>"; };
 		F794B00822017ACA004E9502 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F794B00922017ACA004E9502 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		F7B810522202CFA300FC02A3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		F7B810562202E21D00FC02A3 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		F7C06AF221FAA887001009CD /* WeatherClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C06AF521FAA887001009CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C06AF721FAA887001009CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				F794B006220145F0004E9502 /* LSSettingTableViewController.swift */,
+				F7B810522202CFA300FC02A3 /* PostViewController.swift */,
+				F7B810562202E21D00FC02A3 /* TimePickerViewController.swift */,
+				F759EA81221170DF00418426 /* LSPostTableViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -245,10 +254,13 @@
 				F74FDFAD21FB0B200038CC2A /* sqlitedb.swift in Sources */,
 				F7E5DB3921FC628D007EDD9A /* UserStorage.swift in Sources */,
 				F728F06121FEBAF100A5EB3D /* CityDetailViewController.swift in Sources */,
+				F7B810572202E21D00FC02A3 /* TimePickerViewController.swift in Sources */,
 				F794B007220145F0004E9502 /* LSSettingTableViewController.swift in Sources */,
 				F7E5DB3221FC309E007EDD9A /* SwiftyJSON.swift in Sources */,
 				F748B81E2200052E00DB63B9 /* Configuration.swift in Sources */,
 				F7C06B1821FAB5BA001009CD /* WeatherViewController.swift in Sources */,
+				F7B810532202CFA300FC02A3 /* PostViewController.swift in Sources */,
+				F759EA82221170DF00418426 /* LSPostTableViewController.swift in Sources */,
 				F7C06AF621FAA887001009CD /* AppDelegate.swift in Sources */,
 				F748B81B2200052E00DB63B9 /* NSDate+Date.swift in Sources */,
 				F748B81A2200052E00DB63B9 /* BHJPickerView.swift in Sources */,
