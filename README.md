@@ -21,6 +21,10 @@ IOS项目-天气时钟
 7. 部分页面使用纯代码布局~~争取摆脱使用storyboard布局的习惯~~
 8. 使用segment进行页面控制
 9. 分层完成页面的实现
+10. 本地推送`UNUserNotification`的使用
+11. `TimePicker`注意事项:
+    - 直接获取的时间是 +0000 的时区，要使用`TimeZone`或者通过`DateFormatter`进行时区变换
+12. `UIAlertController`的基本用法
 ## 所用资源
 1. 来自[爱给网](http://www.aigei.com/)的图片
 2. swift对json的解析和操作:[SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON)
