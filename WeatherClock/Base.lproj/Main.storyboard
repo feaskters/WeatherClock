@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7D2-Zp-Za7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="时钟" image="日程示例" selectedImage="日程示例" id="b48-Or-9Ii"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="时钟" image="日程示例" selectedImage="日程示例" id="b48-Or-9Ii"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM0-d2-mo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +355,7 @@
         <scene sceneID="4iD-wb-9Hm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vLv-rf-73s" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设置" image="设置" selectedImage="设置" id="fdu-yb-Oxx"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="设置" image="设置" selectedImage="设置" id="fdu-yb-Oxx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i7D-Xb-ZaS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
