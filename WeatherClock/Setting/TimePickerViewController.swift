@@ -58,7 +58,7 @@ class TimePickerViewController: UIViewController {
             //设置推送
             //设置推送内容
             let notificationContent = UNMutableNotificationContent.init()
-            let content = self.cityInfo["data"]["forecast"][1]["low"].stringValue + "->" + self.cityInfo["data"]["forecast"][1]["high"].stringValue
+            let content = self.cityInfo["data"]["forecast"][1]["low"].stringValue + "->" + self.cityInfo["data"]["forecast"][1]["high"].stringValue + "\n" + self.cityInfo["data"]["forecast"][1]["notice"].stringValue
             notificationContent.body = content
             notificationContent.title = self.cityName.text!
             notificationContent.subtitle = self.cityInfo["data"]["forecast"][1]["type"].stringValue

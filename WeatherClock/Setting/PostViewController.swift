@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class PostViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     //存储key
@@ -44,8 +45,26 @@ class PostViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         bg_view.addSubview(toolbar)
         self.view.addSubview(bg_view)
         self.view.sendSubviewToBack(bg_view)
+        //获取推送权限
+        self.getNotificationRight()
         //从userstorage获取数据
         self.getCityInfo()
+    }
+    
+    //获取推送权限
+    func getNotificationRight(){
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound, .badge]) {
+                (accepted, error) in
+                if !accepted {
+                    //弹出警告框
+                    let alert = UIAlertController.init(title: "系统提示", message: "开启该功能需要推送权限", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction.init(title: "确定", style: UIAlertAction.Style.default, handler: { (action) in
+                         self.navigationController?.popViewController(animated: true)
+                    }))
+                    self.present(alert, animated: true)
+                }
+        }
     }
     
     //从userstorage获取数据
@@ -53,7 +72,7 @@ class PostViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         let us = UserStorage.init()
         //从用户数据中读取citys
         let tem = us.getNormalDefult(key: key)!
-        if tem.count! == 0 {
+        if tem is NSNull || tem.count! == 0 {
             print("数据为空")
             let alert = UIAlertController.init(title: "系统提示", message: "请先在天气页面添加城市", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction.init(title: "确定", style: UIAlertAction.Style.cancel, handler: { (UIAlertAction) in
